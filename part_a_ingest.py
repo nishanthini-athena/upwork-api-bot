@@ -5,8 +5,9 @@ import re
 sys.stdout.reconfigure(encoding="utf-8")
 
 # Constants
-PDF_PATH       = r"c:\Users\Nisha\Downloads\AI_Assignment\API Documentation Partial.pdf"
-CHROMA_DIR     = r"c:\Users\Nisha\Downloads\AI_Assignment\chroma_db"
+BASE_DIR       = os.path.dirname(os.path.abspath(__file__))
+PDF_PATH       = os.path.join(BASE_DIR, "API Documentation Partial.pdf")
+CHROMA_DIR     = os.path.join(BASE_DIR, "chroma_db")
 COLLECTION     = "upwork_api_docs"
 EMBED_MODEL    = "sentence-transformers/all-MiniLM-L6-v2"
 CHUNK_SIZE     = 500

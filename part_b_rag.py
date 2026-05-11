@@ -11,7 +11,8 @@ from langchain_chroma import Chroma
 from langchain_core.documents import Document
 
 # ── Constants ──────────────────────────────────────────────────────────────────
-CHROMA_DIR  = r"c:\Users\Nisha\Downloads\AI_Assignment\chroma_db"
+BASE_DIR    = os.path.dirname(os.path.abspath(__file__))
+CHROMA_DIR  = os.path.join(BASE_DIR, "chroma_db")
 COLLECTION  = "upwork_api_docs"
 EMBED_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 MODEL       = "meta-llama/Meta-Llama-3.1-8B-Instruct"
